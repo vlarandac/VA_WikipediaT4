@@ -46,7 +46,7 @@ with open('links.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
   		l = {'source':row[0], 'target':row[1]}
-  		if "venezuela" in row[0].lower() or "venezuela" in row[1].lower():
+  		if "switzerland" in row[0].lower() or "switzerland" in row[1].lower():
   		    links.append(l);
   		    node1 = {'id':row[0], 'group':categories[row[0]]['description']}
   		    node2 = {'id':row[1], 'group':categories[row[1]]['description']}
@@ -66,7 +66,7 @@ with open('links.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
   		l = {'source':row[0], 'target':row[1]}
-  		if "brazil" in row[0].lower() or "brazil" in row[1].lower():
+  		if "happiness" in row[0].lower() or "happiness" in row[1].lower():
   		    links.append(l);
   		    node1 = {'id':row[0], 'group':categories[row[0]]['description']}
   		    node2 = {'id':row[1], 'group':categories[row[1]]['description']}
@@ -84,7 +84,7 @@ with open('links.csv') as csvfile:
 
 file = {'nodes':nodes, 'links':links}
 
-with open('data.json', 'w') as outfile:
+with open('data2.json', 'w') as outfile:
 	json.dump(file, outfile, sort_keys=True, indent=4, separators=(',', ': '))
 
 #with open('links.csv') as csvfile:

@@ -88,7 +88,6 @@ function createV4SelectableForceDirectedGraph(svg, graph) {
             if ('name' in d)
                 return d.name;
             else
-                console.log(d);
                 return d.id + " - " + d.group; 
         });
 
