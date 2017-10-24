@@ -88,7 +88,8 @@ function createV4SelectableForceDirectedGraph(svg, graph) {
             if ('name' in d)
                 return d.name;
             else
-                return d.id; 
+                console.log(d);
+                return d.id + " - " + d.group; 
         });
 
     var simulation = d3v4.forceSimulation()
@@ -257,8 +258,7 @@ function createV4SelectableForceDirectedGraph(svg, graph) {
         })
     }
 
-    var texts = ['Use the scroll wheel to zoom',
-                 'Hold the shift key to select nodes']
+    var texts = ['Use el scroll para hacer zoom', 'Pase sobre los nodos sin hacer click para conocer el nombre del artículo']
 
     svg.selectAll('text')
         .data(texts)
