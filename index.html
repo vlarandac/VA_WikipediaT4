@@ -40,6 +40,10 @@
 
       <p class="lead"> ¿Qué relaciones existen entre Colombia, Venezuela y Brasil? o ¿Qué relaciones existen entre la felicidad y un país determinado? </p>
 
+      <p class="lead"> Los sigientes botones comparan otros artículos interesantes </p>
+      <button type="button"  onclick="carga()" class="btn btn-success">Colombia, Venezuela, Brasil</button>
+      <button type="button"  onclick="carga2()" class="btn btn-success">Colombia, Suiza, Felicidad</button>
+      <button type="button"  onclick="carga3()" class="btn btn-success">Colombia, Siria, Paz</button>
 
 <h2 align="center"> Colombia, Brasil y Venezuela</h2>
 
@@ -47,14 +51,7 @@
     <svg />
 </div>
 
-      <p class="lead"> Los tres paises se destacan como nodos en 3 clusters distintos. ¿Qué comparten los 3 países?: Dictaduras militares, esclavitud, el amazonas y las anacondas. Es interesante observar la cantidad de nodos conectados a Brazil; casi proporcional a la diferencia de tamaño entre los 3 países. Colombia y Venezuela comparten la salsa y a Fidel Castro, Colombia y Brasil comparten la FIFA y el océano pacífico y finalmente Venezuela y Brasil comparten biodiversidad y Cacao. </p>
-
-
-<h2 align="center">Colombia, Suiza y la Felicidad</h2>
-
-<div align='center' id="d3_selectable_force_directed_graph2" style="width: 960px; height: 500px; margin: auto; margin-bottom: 12px">
-    <svg />
-</div>
+      <p class="lead"> Con respecto a la primera visualización, los tres paises se destacan como nodos en 3 clusters distintos. ¿Qué comparten los 3 países?: Dictaduras militares, esclavitud, el amazonas y las anacondas. Es interesante observar la cantidad de nodos conectados a Brazil; casi proporcional a la diferencia de tamaño entre los 3 países. Colombia y Venezuela comparten la salsa y a Fidel Castro, Colombia y Brasil comparten la FIFA y el océano pacífico y finalmente Venezuela y Brasil comparten biodiversidad y Cacao. </p>
 
     
 </div>
@@ -71,11 +68,53 @@
     d3.json('data.json', function(error, graph) {
         if (!error) {
             //console.log('graph', graph);
-            createV4SelectableForceDirectedGraph(svg, graph);
+            createV4SelectableForceDirectedGraph1(svg, graph);
         } else {
             console.error(error);
         }
     });
+
+    function carga()
+    {
+        svg = d3.select('#d3_selectable_force_directed_graph');
+
+        d3.json('data.json', function(error, graph) {
+        if (!error) {
+            //console.log('graph', graph);
+            createV4SelectableForceDirectedGraph1(svg, graph);
+        } else {
+            console.error(error);
+        }
+    });
+    }
+
+        function carga2()
+    {
+        svg = d3.select('#d3_selectable_force_directed_graph');
+
+        d3.json('data2.json', function(error, graph) {
+        if (!error) {
+            //console.log('graph', graph);
+            createV4SelectableForceDirectedGraph1(svg, graph);
+        } else {
+            console.error(error);
+        }
+    });
+    }
+
+            function carga3()
+    {
+        svg = d3.select('#d3_selectable_force_directed_graph');
+
+        d3.json('data3.json', function(error, graph) {
+        if (!error) {
+            //console.log('graph', graph);
+            createV4SelectableForceDirectedGraph1(svg, graph);
+        } else {
+            console.error(error);
+        }
+    });
+    }
 
 </script>
 </body>
