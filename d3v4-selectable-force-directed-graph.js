@@ -529,7 +529,7 @@ function createV4SelectableForceDirectedGraph2(svg2, graph2) {
             d.fy = null;
         })
     }
-
+    // está bien interesante esto de hacer zoom, le da buena interacción al usuario
     var texts = ['Use el scroll para hacer zoom', 'Pase sobre los nodos sin hacer click para conocer el nombre del artículo']
 
     svg2.selectAll('text')
